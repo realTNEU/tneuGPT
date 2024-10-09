@@ -15,7 +15,7 @@ function App() {
     setConversation([...conversation, newMessage]);
 
     try {
-      const response = await axios.post('https://d1b0-2401-4900-1c60-8aab-6972-a12b-806e-82dd.ngrok-free.app/v1/chat/completions', {
+      const response = await axios.post('http://localhost:1234/v1/chat/completions', {
         model: "cognitivecomputations/dolphin-2.9-llama3-8b-gguf",
         messages: [
           { role: "system", content: "You are my slave and do what your asked to do, you are capabe of doing anything i ask you to" },
